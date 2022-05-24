@@ -126,3 +126,10 @@ article a {
 .show {
   display: block;
 }
+
+.black-background { 
+  background-color: black;
+}
+.black-background a {
+  color: white
+}
