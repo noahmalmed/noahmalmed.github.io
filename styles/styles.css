@@ -1,0 +1,94 @@
+/* SCSS HEX */
+/* SCSS Gradient */
+body {
+  margin: 0px;
+  font-family: "Mooli", sans-serif;
+}
+
+h1 {
+  font-size: 80px;
+  color: #c1dff0;
+}
+
+h2 {
+  text-align: center;
+  color: #c1dff0;
+}
+
+section {
+  background-color: #2d898b;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinning {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  border: 2px solid #c1dff0;
+  animation: spinning 20s linear infinite;
+}
+
+.spinning:nth-child(2n) {
+  animation-delay: -5s;
+}
+
+.spinning:nth-child(3n) {
+  animation-delay: -7.5s;
+}
+
+.spinning:nth-child(4n) {
+  animation-delay: -10s;
+}
+
+.spinning:nth-child(5n) {
+  animation-delay: -12.5s;
+}
+
+.spinning:nth-child(6n) {
+  animation-delay: -15s;
+}
+
+.spinning:nth-child(7n) {
+  animation-delay: -17.5s;
+}
+
+.spinning:nth-child(8n) {
+  animation-delay: -20s;
+}
+
+.spinning:nth-child(9n) {
+  animation-delay: -22.5s;
+}
+
+.spinning:nth-child(10n) {
+  animation-delay: -25s;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg) translate(-40vh) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-40vh) rotate(-360deg);
+  }
+}
+@media only screen and (max-width: 1026px) {
+  img {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

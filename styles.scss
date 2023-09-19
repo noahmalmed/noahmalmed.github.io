@@ -1,0 +1,81 @@
+/* SCSS HEX */
+$baby-blue: #88ccf1ff;
+$columbia-blue: #c1dff0ff;
+$blue-munsell: #3587a4ff;
+$teal: #2d848aff;
+$dark-cyan: #2d898bff;
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #88ccf1ff, #c1dff0ff, #3587a4ff, #2d848aff, #2d898bff);
+$gradient-right: linear-gradient(90deg, #88ccf1ff, #c1dff0ff, #3587a4ff, #2d848aff, #2d898bff);
+$gradient-bottom: linear-gradient(180deg, #88ccf1ff, #c1dff0ff, #3587a4ff, #2d848aff, #2d898bff);
+$gradient-left: linear-gradient(270deg, #88ccf1ff, #c1dff0ff, #3587a4ff, #2d848aff, #2d898bff);
+$gradient-top-right: linear-gradient(45deg, #88ccf1ff, #c1dff0ff, #3587a4ff, #2d848aff, #2d898bff);
+$gradient-bottom-right: linear-gradient(135deg, #88ccf1ff, #c1dff0ff, #3587a4ff, #2d848aff, #2d898bff);
+$gradient-top-left: linear-gradient(225deg, #88ccf1ff, #c1dff0ff, #3587a4ff, #2d848aff, #2d898bff);
+$gradient-bottom-left: linear-gradient(315deg, #88ccf1ff, #c1dff0ff, #3587a4ff, #2d848aff, #2d898bff);
+$gradient-radial: radial-gradient(#88ccf1ff, #c1dff0ff, #3587a4ff, #2d848aff, #2d898bff);
+
+body {
+  margin: 0px;
+  font-family: "Mooli", sans-serif;
+}
+h1 {
+  font-size: 80px;
+  color: $columbia-blue;
+}
+
+h2 {
+  text-align: center;
+  color: $columbia-blue;
+}
+
+section {
+  background-color: $dark-cyan;
+}
+
+.center{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinning{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  border: 2px solid $columbia-blue;
+  animation: spinning 20s linear infinite;
+}
+
+@for $i from 2 through 10 {
+  .spinning:nth-child(#{$i}n) {
+    animation-delay: -#{$i*2.5}s;
+  }
+}
+
+@keyframes spinning{
+  0%{
+    transform:rotate(0deg)
+              translate(-40vh)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-40vh)
+              rotate(-360deg);
+  }
+}
+
+
+@media only screen and (max-width: 1026px) {
+  img {
+      display: none;
+  }
+}
