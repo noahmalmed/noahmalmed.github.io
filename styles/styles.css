@@ -8,6 +8,8 @@ body {
 h1 {
   font-size: 80px;
   color: #c1dff0;
+  z-index: 1000;
+  position: relative;
 }
 
 h2 {

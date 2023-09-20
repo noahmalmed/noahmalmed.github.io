@@ -23,6 +23,8 @@ body {
 h1 {
   font-size: 80px;
   color: $columbia-blue;
+  z-index: 1000;
+  position: relative;
 }
 
 h2 {
